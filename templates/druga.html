@@ -1,21 +1,14 @@
-<!DOCTYPE html>
-<html lang="pl">
-    <head>
-        <meta charset="utf-8">
-        <title>Gabriel Marczak</title>
-        <link rel="stylesheet" href={{ url_for('static', filename='style.css') }}>
-    </head>
-    <body>
-        <h1>Witaj na mojej stronie domowej</h2>
-        <img src={{url_for ('static', filename='rin.jpg')}} alt="Photo" width="200px" height="200px">
-        <br>
-        <strong>Kontakt</strong>
-        <ul>
-            <li>email: jakisfajny@gmail.com</li>
-            <li>telefon: 600062137</li>
-        </ul>
-        <h2>Wyślij wiadomość</h2>
-        <textarea></textarea>
-        <button type="button">Prześlij</button>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block title %}Kontakt{% endblock %}
+{% block content %}
+<strong>Kontakt</strong>
+<ul>
+    <li>email: jakisfajny@gmail.com</li>
+    <li>telefon: 600062137</li>
+</ul>
+<form action="" method="POST">
+    <label>First Name</label>
+    <input name="firstname"/>
+    <input type="submit" value="submit"/>
+</form>
+{% endblock %}
