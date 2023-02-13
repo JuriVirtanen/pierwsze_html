@@ -7,6 +7,7 @@ app = Flask(__name__)
 def me():
     return render_template("pierwsza.html")
 
+
 @app.route("/mypage/contact", methods=['GET', 'POST'])
 def contact():
     if request.method == 'GET':
